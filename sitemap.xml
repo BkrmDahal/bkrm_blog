@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://rpy3.com/tags</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/categories</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/posts/nepse-market-cap</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/pages/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/pages/contacts/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/posts/building-ranking-algorithm</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/posts/deploy-docker-using-github-actions-to-google-cloud-run</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/posts/vlookup-in-r-python</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/tag/algorithm</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/tag/cloud-run</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/tag/docker</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/tag/gcp</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/tag/github-actions</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/tag/join</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/tag/nepse</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/tag/python</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/tag/r</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/tag/thinking</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/tag/visualization</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/category/algorithm</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/category/tips</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/category/visualization</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rpy3.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+</urlset>
