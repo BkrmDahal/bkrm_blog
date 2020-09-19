@@ -81,10 +81,11 @@ jobs:
           docker tag $IMAGE_ID:$VERSION $IMAGE_ID_GCP
           
       - name: Deploy service to Cloud Run
-        uses: stefda/action-cloud-run@v1.0
+        uses: BkrmDahal/action-cloud-run@v1.1
         with:
           image: asia.gcr.io/${{ secrets.GCP_PROJECT_ID }}/bkrmblog:$VERSION
           service: bkrm-blog
+          version: $VERSION
           project: ${{ secrets.GCP_PROJECT_ID }}
           region: asia-southeast1
           service key: ${{ secrets.GCP_CLOUD_RUN_SERVICE_KEY }}
