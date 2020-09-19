@@ -76,14 +76,14 @@ jobs:
           docker push $IMAGE_ID:$VERSION
           
           # tag image for gcp
-          IMAGE_ID_GCP=asia.gcr.io/${{ secrets.GCP_PROJECT_ID }}/$IMAGE_NAME:$VERSION
+          IMAGE_ID_GCP=asia.gcr.io/${{ secrets.GCP_PROJECT_ID }}/bkrmblog:$VERSION
           echo $IMAGE_ID_GCP
           docker tag $IMAGE_ID:$VERSION $IMAGE_ID_GCP
           
       - name: Deploy service to Cloud Run
         uses: stefda/action-cloud-run@v1.0
         with:
-          image: asia.gcr.io/${{ secrets.GCP_PROJECT_ID }}/$IMAGE_NAME:latest
+          image: asia.gcr.io/${{ secrets.GCP_PROJECT_ID }}/bkrmblog
           service: bkrm-blog
           project: ${{ secrets.GCP_PROJECT_ID }}
           region: asia-northeast1
