@@ -69,9 +69,6 @@ jobs:
           # Use Docker `latest` tag convention
           [ "$VERSION" == "master" ] && VERSION=latest
 
-          echo IMAGE_ID=$IMAGE_ID
-          echo VERSION=$VERSION
-
           docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
           
@@ -80,12 +77,11 @@ jobs:
           echo $IMAGE_ID_GCP
           docker tag $IMAGE_ID:$VERSION $IMAGE_ID_GCP
           
-      - name: Deploy to Cloud Run 
-        uses: BkrmDahal/action-cloud-run@v1.1.2
+      - name: Cloud Run
+        uses: stefda/action-cloud-run@v1.0
         with:
-          image: asia.gcr.io/${{ secrets.GCP_PROJECT_ID }}/bkrmblog:$VERSION
+          image: asia.gcr.io/${{ secrets.GCP_PROJECT_ID }}/bkrmblog
           service: bkrm-blog
-          image tag: $VERSION
           project: ${{ secrets.GCP_PROJECT_ID }}
           region: asia-southeast1
           service key: ${{ secrets.GCP_CLOUD_RUN_SERVICE_KEY }}
