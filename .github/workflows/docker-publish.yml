@@ -83,7 +83,7 @@ jobs:
       - name: Deploy service to Cloud Run
         uses: stefda/action-cloud-run@v1.0
         with:
-          image: asia.gcr.io/${{ secrets.GCP_PROJECT_ID }}/bkrmblog
+          image: asia.gcr.io/${{ secrets.GCP_PROJECT_ID }}/bkrmblog:$VERSION
           service: bkrm-blog
           project: ${{ secrets.GCP_PROJECT_ID }}
           region: asia-southeast1
