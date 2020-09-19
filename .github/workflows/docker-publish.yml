@@ -85,7 +85,7 @@ jobs:
         with:
           image: asia.gcr.io/${{ secrets.GCP_PROJECT_ID }}/bkrmblog:$VERSION
           service: bkrm-blog
-          version: $VERSION
+          image tag: $VERSION
           project: ${{ secrets.GCP_PROJECT_ID }}
           region: asia-southeast1
           service key: ${{ secrets.GCP_CLOUD_RUN_SERVICE_KEY }}
