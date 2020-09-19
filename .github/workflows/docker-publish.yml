@@ -80,8 +80,8 @@ jobs:
           echo $IMAGE_ID_GCP
           docker tag $IMAGE_ID:$VERSION $IMAGE_ID_GCP
           
-      - name: Deploy service to Cloud Run
-        uses: BkrmDahal/action-cloud-run@v1.1
+      - name: Deploy to Cloud Run 
+        uses: BkrmDahal/action-cloud-run@V1.1.1
         with:
           image: asia.gcr.io/${{ secrets.GCP_PROJECT_ID }}/bkrmblog:$VERSION
           service: bkrm-blog
