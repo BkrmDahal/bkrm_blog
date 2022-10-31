@@ -13,4 +13,7 @@ You found a lot of spelling and grammer mistake on blog.
 ![iamgoodwithmath](/media/iamgoodwithmath.jpg)
 :-D
 
+Currently this blog is deployed using [cloudflare pages](https://pages.cloudflare.com/).
+More detail here: [cloudflare pages get started](https://developers.cloudflare.com/pages/get-started/)
+
 Happy Coding. 

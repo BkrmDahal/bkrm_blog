@@ -135,3 +135,7 @@ Quote from book I am reading:
 > _“It's easy to say yes. Yes to another feature, yes to an overly optimistic deadline, yes to a mediocre design. Soon, the stack of things you've said yes to grows so tall you cant even see the things you should really be doing”_ 
 > 
 > __― Rework__
+
+Upated: 2022-Oct
+Currently this blog is deployed using [cloudflare pages](https://pages.cloudflare.com/) as it alot easy. 
+More detail here: [cloudflare pages get started](https://developers.cloudflare.com/pages/get-started/)
