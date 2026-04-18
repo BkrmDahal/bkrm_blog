@@ -198,16 +198,7 @@ Both rely on the same invariant: the command itself always terminates (queue dra
 
 ## Possible risks
 
-Same framing as the sandbox post: blast-radius reduction, not trust-building. Letting the prompt loop concentrates a few risks that were diffuse when each run did only one ticket:
-
-- **Per-run cost is unbounded unless you cap it.** With no cap, a 50-ticket queue means 50 Claude sessions back-to-back in one process. The per-run cap (10 above) is what keeps a single bad morning from being a very expensive morning. Pick the cap first, pick the tag second.
-- **One bad ticket can poison the rest.** A ticket that triggers a flaky MCP call or a weird git state can cascade — the agent's working memory from the broken attempt leaks into the next iteration. That's the reason for hard-stop-on-error. The trade-off: legitimate intermittent failures (network blip, rate-limit) also hard-stop, and you need a human to restart. Acceptable, because "restart the bot" is cheaper than "untangle 9 confused PRs."
-- **Misreading tickets at volume.** Ten tagged tickets processed sequentially means ten bets on the agent reading each ticket correctly. The plan-comment gate helps, but only if someone actually watches the plans post. If nobody watches, you're trusting an agent to write production code against untriaged requests at ~5-minute cadence.
-- **Branch and base-branch collisions multiply.** With one ticket per run, slug collisions are rare. With ten, similar titles or overlapping base branches become likely. A ticket that mentions a nonexistent base branch silently falls back to the default. Always review PR base before merging, especially when the bot drained a batch.
-- **Tests pass in the sandbox, fail in CI.** The sandbox's `npm test` / `go test` is *not* CI. Ten green local runs on ten PRs are ten signals, not ten guarantees.
-- **Claim rollback on crash is not atomic.** If the agent dies between tagging `claude_in_progress` and posting the plan, the ticket is claimed with no plan visible. Future iterations skip it and a human must notice. Worth writing a "janitor" tick that removes `claude_in_progress` from tickets with no plan comment in the last N minutes if you scale this past a handful of runs per day.
-- **`gh pr create` noise at volume.** Every successful iteration leaves a branch and PR on the remote. A drained queue of 10 means 10–20 branches at once. `gh pr list --author @me --state open` should be part of your morning coffee ritual.
-- **MCP tool-name drift is a queue-wide outage.** The command hardcodes `clickup_filter_tasks`, `clickup_add_tag_to_task`, etc. If the MCP server renames a tool, every iteration fails at the same step. Pin the MCP server version, or front-load tool names into a config block at the top of the command so updates are one edit.
+Same framing as the sandbox post: blast-radius reduction, not trust-building.
 
 ## When it's working
 
